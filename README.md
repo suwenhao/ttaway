@@ -13,71 +13,70 @@
    - ttaway mongodb 数据库文件
 
 #### 项目运行详细说明
-1. 先安装了mongodb数据库，然后进入这个项目目录docs文件夹
-2. 在docs文件夹打开cmd命令行，运行 `mongorestore -h 127.0.0.1 -d ttaway ./ttaway` 这条命令
-3. 这样数据库文件就齐全了，要保持MongoDB数据库处于启动中，mongodb4.xx版本的话在window上是开机就启动的，所以比较方便，mongodb3.xx版本要手动启动。
-4. 然后client文件夹、admin-client文件夹和server文件夹，都运行npm install命令，运行环境装备完毕。
-5. 启动后台，在server文件夹运行 npm run start
-6. client文件夹为H5端，运行命令为npm run serve
-7. admin-client文件夹为管理后台，运行命令为npm run watch-server，如果要运行npm run start的话，这个是编译ts版本成js版本放到dist目录，不过public目录静态文件不会带过去，所以要复制过去
-8. H5端图片不显示问题，可以修改client文件夹下的`.env.dev`文件里面的VUE_APP_UPLOAD_URL
+
+1. 先安装了 mongodb 数据库，然后进入这个项目目录 docs 文件夹
+2. 在 docs 文件夹打开 cmd 命令行，运行 `mongorestore -h 127.0.0.1 -d ttaway ./ttaway` 这条命令
+3. 这样数据库文件就齐全了，要保持 MongoDB 数据库处于启动中，mongodb4.xx 版本的话在 window 上是开机就启动的，所以比较方便，mongodb3.xx 版本要手动启动。
+4. 然后 client 文件夹、admin-client 文件夹和 server 文件夹，都运行 npm install 命令，运行环境装备完毕。
+5. 启动后台，在 server 文件夹运行 npm run start
+6. client 文件夹为 H5 端，运行命令为 npm run serve
+7. admin-client 文件夹为管理后台，运行命令为 npm run watch-server，如果要运行 npm run start 的话，这个是编译 ts 版本成 js 版本放到 dist 目录，不过 public 目录静态文件不会带过去，所以要复制过去
+8. H5 端图片不显示问题，可以修改 client 文件夹下的`.env.dev`文件里面的 VUE_APP_UPLOAD_URL
    - 值为：http://localhost:3001/upload/
-   - 或者：http://本地ip4地址:3001/upload/   注意:是你电脑的ip4地址，这样在手机上测试也能看到图片
+   - 或者：http://本地 ip4 地址:3001/upload/ 注意:是你电脑的 ip4 地址，这样在手机上测试也能看到图片
 
 #### H5 端页面预览
 
-<img src="./docs/images/1.png" width="220">
-<img src="./docs/images/2.png" width="220">
-<img src="./docs/images/3.png" width="220">
-<img src="./docs/images/4.png" width="220">
-<img src="./docs/images/5.png" width="220">
-<img src="./docs/images/6.png" width="220">
-<img src="./docs/images/7.png" width="220">
-<img src="./docs/images/8.png" width="220">
-<img src="./docs/images/9.png" width="220">
-<img src="./docs/images/10.png" width="220">
-<img src="./docs/images/11.png" width="220">
-<img src="./docs/images/12.png" width="220">
-<img src="./docs/images/13.png" width="220">
-<img src="./docs/images/14.png" width="220">
-<img src="./docs/images/15.png" width="220">
-<img src="./docs/images/16.png" width="220">
-<img src="./docs/images/17.png" width="220">
-<img src="./docs/images/18.png" width="220">
-<img src="./docs/images/19.png" width="220">
-<img src="./docs/images/20.png" width="220">
-<img src="./docs/images/21.png" width="220">
-<img src="./docs/images/22.png" width="220">
-<img src="./docs/images/23.png" width="220">
-<img src="./docs/images/24.png" width="220">
-<img src="./docs/images/25.png" width="220">
-<img src="./docs/images/26.png" width="220">
-<img src="./docs/images/27.png" width="220">
-<img src="./docs/images/28.png" width="220">
-<img src="./docs/images/29.png" width="220">
-<img src="./docs/images/30.png" width="220">
-<img src="./docs/images/31.png" width="220">
-<img src="./docs/images/32.png" width="220">
-<img src="./docs/images/33.png" width="220">
-
-#### 后台管理页面预览
-
-<img src="./docs/images/34.png" width="880">
-<img src="./docs/images/35.png" width="880">
-<img src="./docs/images/36.png" width="880">
-<img src="./docs/images/37.png" width="880">
-<img src="./docs/images/38.png" width="880">
-<img src="./docs/images/39.png" width="880">
-<img src="./docs/images/40.png" width="880">
-<img src="./docs/images/41.png" width="880">
-<img src="./docs/images/42.png" width="880">
-<img src="./docs/images/43.png" width="880">
-<img src="./docs/images/44.png" width="880">
-<img src="./docs/images/45.png" width="880">
-<img src="./docs/images/46.png" width="880">
-<img src="./docs/images/47.png" width="880">
-<img src="./docs/images/48.png" width="880">
-<img src="./docs/images/49.png" width="880">
+<img src="https://gitee.com/suwenhao/ttaway/raw/master/docs/images/1.png" width="220">
+<img src="https://gitee.com/suwenhao/ttaway/raw/master/docs/images/2.png" width="220">
+<img src="https://gitee.com/suwenhao/ttaway/raw/master/docs/images/3.png" width="220">
+<img src="https://gitee.com/suwenhao/ttaway/raw/master/docs/images/4.png" width="220">
+<img src="https://gitee.com/suwenhao/ttaway/raw/master/docs/images/5.png" width="220">
+<img src="https://gitee.com/suwenhao/ttaway/raw/master/docs/images/6.png" width="220">
+<img src="https://gitee.com/suwenhao/ttaway/raw/master/docs/images/7.png" width="220">
+<img src="https://gitee.com/suwenhao/ttaway/raw/master/docs/images/8.png" width="220">
+<img src="https://gitee.com/suwenhao/ttaway/raw/master/docs/images/9.png" width="220">
+<img src="https://gitee.com/suwenhao/ttaway/raw/master/docs/images/10.png" width="220">
+<img src="https://gitee.com/suwenhao/ttaway/raw/master/docs/images/11.png" width="220">
+<img src="https://gitee.com/suwenhao/ttaway/raw/master/docs/images/12.png" width="220">
+<img src="https://gitee.com/suwenhao/ttaway/raw/master/docs/images/13.png" width="220">
+<img src="https://gitee.com/suwenhao/ttaway/raw/master/docs/images/14.png" width="220">
+<img src="https://gitee.com/suwenhao/ttaway/raw/master/docs/images/15.png" width="220">
+<img src="https://gitee.com/suwenhao/ttaway/raw/master/docs/images/16.png" width="220">
+<img src="https://gitee.com/suwenhao/ttaway/raw/master/docs/images/17.png" width="220">
+<img src="https://gitee.com/suwenhao/ttaway/raw/master/docs/images/18.png" width="220">
+<img src="https://gitee.com/suwenhao/ttaway/raw/master/docs/images/19.png" width="220">
+<img src="https://gitee.com/suwenhao/ttaway/raw/master/docs/images/20.png" width="220">
+<img src="https://gitee.com/suwenhao/ttaway/raw/master/docs/images/21.png" width="220">
+<img src="https://gitee.com/suwenhao/ttaway/raw/master/docs/images/22.png" width="220">
+<img src="https://gitee.com/suwenhao/ttaway/raw/master/docs/images/23.png" width="220">
+<img src="https://gitee.com/suwenhao/ttaway/raw/master/docs/images/24.png" width="220">
+<img src="https://gitee.com/suwenhao/ttaway/raw/master/docs/images/25.png" width="220">
+<img src="https://gitee.com/suwenhao/ttaway/raw/master/docs/images/26.png" width="220">
+<img src="https://gitee.com/suwenhao/ttaway/raw/master/docs/images/27.png" width="220">
+<img src="https://gitee.com/suwenhao/ttaway/raw/master/docs/images/28.png" width="220">
+<img src="https://gitee.com/suwenhao/ttaway/raw/master/docs/images/29.png" width="220">
+<img src="https://gitee.com/suwenhao/ttaway/raw/master/docs/images/30.png" width="220">
+<img src="https://gitee.com/suwenhao/ttaway/raw/master/docs/images/31.png" width="220">
+<img src="https://gitee.com/suwenhao/ttaway/raw/master/docs/images/32.png" width="220">
+<img src="https://gitee.com/suwenhao/ttaway/raw/master/docs/images/33.png" width="220">https://gitee.com/suwenhao/ttaway/raw/master
+#### 后台https://gitee.com/suwenhao/ttaway/raw/master理页面预览https://gitee.com/suwenhao/ttaway/raw/master
+<img src="https://gitee.com/suwenhao/ttaway/raw/master/docs/images/34.png" width="880">
+<img src="https://gitee.com/suwenhao/ttaway/raw/master/docs/images/35.png" width="880">
+<img src="https://gitee.com/suwenhao/ttaway/raw/master/docs/images/36.png" width="880">
+<img src="https://gitee.com/suwenhao/ttaway/raw/master/docs/images/37.png" width="880">
+<img src="https://gitee.com/suwenhao/ttaway/raw/master/docs/images/38.png" width="880">
+<img src="https://gitee.com/suwenhao/ttaway/raw/master/docs/images/39.png" width="880">
+<img src="https://gitee.com/suwenhao/ttaway/raw/master/docs/images/40.png" width="880">
+<img src="https://gitee.com/suwenhao/ttaway/raw/master/docs/images/41.png" width="880">
+<img src="https://gitee.com/suwenhao/ttaway/raw/master/docs/images/42.png" width="880">
+<img src="https://gitee.com/suwenhao/ttaway/raw/master/docs/images/43.png" width="880">
+<img src="https://gitee.com/suwenhao/ttaway/raw/master/docs/images/44.png" width="880">
+<img src="https://gitee.com/suwenhao/ttaway/raw/master/docs/images/45.png" width="880">
+<img src="https://gitee.com/suwenhao/ttaway/raw/master/docs/images/46.png" width="880">
+<img src="https://gitee.com/suwenhao/ttaway/raw/master/docs/images/47.png" width="880">
+<img src="https://gitee.com/suwenhao/ttaway/raw/master/docs/images/48.png" width="880">
+<img src="https://gitee.com/suwenhao/ttaway/raw/master/docs/images/49.png" width="880">
 
 #### 技术栈说明
 
@@ -133,5 +132,4 @@
     - 在 server 文件夹的 src 文件夹的 conf 文件夹中的 db.ts 做用户名和密码配置
 2.  后台管理登录
     - 账号：admin 密码：admin
-3.  H5端验证码，看控制台或者查看点击发送验证码的接口看其返回的数据就是验证码了
-
+3.  H5 端验证码，看控制台或者查看点击发送验证码的接口看其返回的数据就是验证码了
