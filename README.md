@@ -59,8 +59,8 @@
 <img src="https://gitee.com/suwenhao/ttaway/raw/master/docs/images/30.png" width="220">
 <img src="https://gitee.com/suwenhao/ttaway/raw/master/docs/images/31.png" width="220">
 <img src="https://gitee.com/suwenhao/ttaway/raw/master/docs/images/32.png" width="220">
-<img src="https://gitee.com/suwenhao/ttaway/raw/master/docs/images/33.png" width="220">https://gitee.com/suwenhao/ttaway/raw/master
-#### 后台https://gitee.com/suwenhao/ttaway/raw/master理页面预览https://gitee.com/suwenhao/ttaway/raw/master
+<img src="https://gitee.com/suwenhao/ttaway/raw/master/docs/images/33.png" width="220">
+#### 后台管理页面预览
 <img src="https://gitee.com/suwenhao/ttaway/raw/master/docs/images/34.png" width="880">
 <img src="https://gitee.com/suwenhao/ttaway/raw/master/docs/images/35.png" width="880">
 <img src="https://gitee.com/suwenhao/ttaway/raw/master/docs/images/36.png" width="880">
