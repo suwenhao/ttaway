@@ -26,7 +26,7 @@
    - 或者：http://本地 ip4 地址:3001/upload/ 注意:是你电脑的 ip4 地址，这样在手机上测试也能看到图片
 
 #### H5 端页面预览
-
+<div style="display: flex;"> 
 <img src="https://gitee.com/suwenhao/ttaway/raw/master/docs/images/1.png" width="220">
 <img src="https://gitee.com/suwenhao/ttaway/raw/master/docs/images/2.png" width="220">
 <img src="https://gitee.com/suwenhao/ttaway/raw/master/docs/images/3.png" width="220">
@@ -60,6 +60,7 @@
 <img src="https://gitee.com/suwenhao/ttaway/raw/master/docs/images/31.png" width="220">
 <img src="https://gitee.com/suwenhao/ttaway/raw/master/docs/images/32.png" width="220">
 <img src="https://gitee.com/suwenhao/ttaway/raw/master/docs/images/33.png" width="220">
+</div>
 #### 后台管理页面预览
 <img src="https://gitee.com/suwenhao/ttaway/raw/master/docs/images/34.png" width="880">
 <img src="https://gitee.com/suwenhao/ttaway/raw/master/docs/images/35.png" width="880">
@@ -77,7 +78,6 @@
 <img src="https://gitee.com/suwenhao/ttaway/raw/master/docs/images/47.png" width="880">
 <img src="https://gitee.com/suwenhao/ttaway/raw/master/docs/images/48.png" width="880">
 <img src="https://gitee.com/suwenhao/ttaway/raw/master/docs/images/49.png" width="880">
-
 #### 技术栈说明
 
 1. h5 端使用的以下技术 vue + vuex + vue-router + typescript + less + vant，使用的是 vant-ui 框架
