@@ -1,0 +1,20 @@
+{
+  "name": "ttaway",
+  "version": "1.0.0",
+  "description": "外卖系统",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "server": "cd server && yarn watch-server",
+    "admin": "cd admin-client && yarn start",
+    "start": "cd client && yarn start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://gitee.com/suwenhao/ttaway.git"
+  },
+  "author": "",
+  "license": "ISC"
+}

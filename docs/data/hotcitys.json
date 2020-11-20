@@ -1,0 +1,8 @@
+{"id":1,"name":"上海","abbr":"SH","area_code":"021","pinyin": "shanghai", "is_map": true, "longitude": 121.473701, "latitude": 31.23037,"sort": 1}
+{"id":2,"name":"哈尔滨","abbr":"HEB","area_code":"0451","pinyin": "haerbin", "is_map": true, "longitude": 126.535797, "latitude": 45.802158,"sort": 4}
+{"id":3,"name":"南京","abbr":"NJ","area_code":"025","pinyin": "nanjing", "is_map": true, "longitude": 118.504669, "latitude": 31.84178,"sort": 5}
+{"id":4,"name":"广州","abbr":"GZ","area_code":"020","pinyin": "guangzhou", "is_map": true, "longitude": 113.264359, "latitude": 23.12908,"sort": 6}
+{"id":5,"name":"厦门","abbr":"XM","area_code":"0592","pinyin": "xiamen", "is_map": true, "longitude": 118.089478, "latitude": 24.479509,"sort": 7}
+{"id":6,"name":"杭州","abbr":"HZ","area_code":"0571","pinyin": "hangzhou", "is_map": true, "longitude": 120.155151, "latitude": 30.274151,"sort": 8}
+{"id":7,"name":"天津","abbr":"TJ","area_code":"022","pinyin": "tianjin", "is_map": true, "longitude": 117.199371, "latitude": 39.085098,"sort": 14}
+{"id":8,"name":"青岛","abbr":"QD","area_code":"0532","pinyin": "qingdao", "is_map": true, "longitude": 120.382988, "latitude": 36.066231,"sort": 15}

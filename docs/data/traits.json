@@ -1,0 +1,7 @@
+{ "id":1, "val": "pin", "description": "品牌保证", "icon_color": "3FBDE6", "icon_name": "品", "name": "品牌保证"}
+{ "id":2, "val": "bao", "description": "已加入“外卖保”计划，食品安全有保障", "icon_color": "999999", "icon_name": "保", "name": "外卖保" }
+{ "id":3, "val": "zhun", "description": "准时必达，超时秒赔", "icon_color": "57A9FF", "icon_name": "准", "name": "准时达"}
+{ "id":4, "val": "new", "description": "新店", "icon_color": "E8842D", "icon_name": "新", "name": "新开餐馆"}
+{ "id":5, "val": "fu", "description": "可使用支付宝、微信、手机QQ进行在线支付", "icon_color": "FF4E00", "icon_name": "付", "name": "在线支付"}
+{ "id":6, "val": "song", "description": "该餐馆由蜂鸟配送", "icon_color": "FF4E00", "icon_name": "送", "name": "蜂鸟配送" }
+{ "id":7, "val": "piao", "description": "该商家支持开发票，请在下单时填写好发票抬头", "icon_color": "999999", "icon_name": "票", "name": "开发票"}

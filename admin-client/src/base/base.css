@@ -1,0 +1,28 @@
+.base {
+  overflow-y: auto;
+  overflow-x: hidden;
+  height: calc(100vh - 90px);
+}
+.base .breadcrumb {
+  padding: 10px;
+}
+.base .back-top {
+  position: fixed;
+  bottom: 60px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  border-radius: 40px;
+  color: #fff;
+  background-color: #1088e9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 5;
+  font-size: 18px;
+  cursor: pointer;
+}
+.base .card-table {
+  margin: 0 10px;
+  background-color: #fff;
+}

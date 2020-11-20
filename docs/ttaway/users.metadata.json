@@ -1,0 +1,1 @@
+{"options":{},"indexes":[{"v":2,"key":{"_id":1},"name":"_id_","ns":"ttaway.users"},{"v":2,"unique":true,"key":{"username":1},"name":"username_1","ns":"ttaway.users","background":true},{"v":2,"unique":true,"key":{"phone":1},"name":"phone_1","ns":"ttaway.users","background":true}],"uuid":"8d286ea70a3643e3ba6ff744640cae0b"}

@@ -1,0 +1,1 @@
+mongoimport --db ttaway --collection promotions --file promotions.json

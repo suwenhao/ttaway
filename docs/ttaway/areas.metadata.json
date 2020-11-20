@@ -1,0 +1,1 @@
+{"options":{},"indexes":[{"v":2,"key":{"_id":1},"name":"_id_","ns":"ttaway.areas"},{"v":2,"unique":true,"key":{"value":1},"name":"value_1","ns":"ttaway.areas","background":true}],"uuid":"04114020c1c84635a338dc95b820e62f"}

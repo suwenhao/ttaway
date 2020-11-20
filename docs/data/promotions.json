@@ -1,0 +1,11 @@
+{"val": "jian","id":1,"icon_color":"F07373","icon_name":"减","name": "满减优惠"}
+{"val": "shou","id":2,"icon_color":"70BC46","icon_name":"首","name": "首单立减"}
+{"val": "xin","id":3,"icon_color":"F07373","icon_name":"新","name": "门店新客立减"}
+{"val": "te","id":4,"icon_color":"F1884F","icon_name":"特","name": "特价商品"}
+{"val": "hong","id":5,"icon_color":"70BC46","icon_name":"红","name": "下单返红包"}
+{"val": "ling","id":6,"icon_color":"70BC46","icon_name":"领","name": "进店领红包"}
+{"val": "pei","id":7,"icon_color":"999999","icon_name":"配","name": "配送费优惠"}
+{"val": "zeng","id":8,"icon_color":"F1884F","icon_name":"赠","name": "赠品优惠"}
+{"val": "piao","id":9,"icon_color":"999999","icon_name":"票","name": "支持开发票"}
+{"val": "zhe","id":10,"icon_color":"F07373","icon_name":"折","name": "折扣商品"}
+{"val": "bao","id":11,"icon_color":"999999","icon_name":"保","name": "食品安全保护"}

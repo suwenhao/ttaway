@@ -1,0 +1,2 @@
+export const GET_ROLE_LIST = 'GET_ROLE_LIST'
+export const GET_ROLE_LIST_SET = 'GET_ROLE_LIST_SET'
