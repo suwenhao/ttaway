@@ -45,13 +45,17 @@ import { Component, Vue } from 'vue-property-decorator'
 import {TOKEN, USERID} from '@/utils/storage'
 // @ts-ignore
 import { getSms, login } from '@/service'
+
+// component装饰器
 @Component({
   computed: {
+     // 计算属性获取token
     token () {
       return Cookies.get(TOKEN) || null
     }
   },
   mounted () {
+    // 存在token是登录状态时就跳转到首页
     if (this.token) {
       this.$router.push({name: 'home'})
     }
@@ -60,12 +64,15 @@ import { getSms, login } from '@/service'
 export default class Login extends Vue  {
   phone: string = ''
   sms: string = ''
+  // 提交登录
   async onSubmit (values) {
     console.log('submit', values);
+    // 请求登录接口
     let {erron, data, message} = await login(values)
     if (erron !== 0) {
       this.$notify({ type: 'warning', message})
     } else {
+      // 保存userId和登录token
       Cookies.set(USERID, data._id)
       Cookies.set(TOKEN, true)
       if (this.$route.query.path) {
@@ -77,9 +84,11 @@ export default class Login extends Vue  {
       this.$toast('登录成功')
     }
   }
+  // 验证手机号码
   validator (val) {
     return /^1[3456789]\d{9}$/.test(val)
   }
+  // 点击发送获取验证码请求
   async send () {
     if (this.phone === '') {
       this.$notify({ type: 'warning', message: '请输入手机号码' })

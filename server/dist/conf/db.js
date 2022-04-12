@@ -16,8 +16,8 @@ let REDIS_CONF_M = {
 };
 let DATABASE_CONF_M = {
     host: 'localhost',
-    user: 'ttaway',
-    password: 'ttaway',
+    // user: 'ttaway',
+    // password: 'ttaway',
     port: '27017',
     database: 'ttaway'
 };
@@ -30,8 +30,8 @@ if (env_1.isProd) {
     // 线上数据库配置
     DATABASE_CONF_M = {
         host: 'localhost',
-        user: 'ttaway',
-        password: 'ttaway',
+        // user: 'ttaway',
+        // password: 'ttaway',
         port: '27017',
         database: 'ttaway'
     };

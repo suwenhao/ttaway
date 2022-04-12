@@ -56,6 +56,7 @@ type IProps = FormComponentProps & RouteComponentProps & {
 class AddEditShop extends Component<IProps> {
   constructor(props: any) {
     super(props);
+    // @ts-ignore
     this.handleSearch = debounce(this.handleSearch, 300);
   }
   componentWillMount () {
@@ -133,7 +134,7 @@ class AddEditShop extends Component<IProps> {
     }
   }
   // 点击地址框搜索地址
-  private handleSearch = async (value: string) => {
+  private handleSearch: any = async (value: string) => {
     let { city } = this.state
     let params = {
       query: value,

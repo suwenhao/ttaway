@@ -11,13 +11,13 @@
             </van-swipe>
             <div v-if="isAddress===3" class="shoplist-title" ref="shoptitle">推荐商家</div>
             <DropdownMenu
-                v-if="isAddress===3"
-                @clearFilter="clearFilter"
-                @filter="filterChange"
-                @change="menuChange"
-                @scrollMenu="scrollMenu"
-                @close="closeMenu"
-                :fixed="menuFixed"></DropdownMenu>
+            v-if="isAddress===3"
+            @clearFilter="clearFilter"
+            @filter="filterChange"
+            @change="menuChange"
+            @scrollMenu="scrollMenu"
+            @close="closeMenu"
+            :fixed="menuFixed"></DropdownMenu>
             <div class="dropdiv" v-if="menuFixed"></div>
             <van-list
                 v-if="isAddress===3"
@@ -41,7 +41,7 @@
 
 <script lang='ts'>
 import { Component, Vue, Watch } from "vue-property-decorator";
-import Star from "@/components/Star.vue";
+// import Star from "@/components/Star.vue";
 import HomeHeader from "@/components/Layout/HomeHeader.vue";
 import CateView from '@/components/Home/CateView.vue'
 import DropdownMenu from '@/components/Home/DropdownMenu.vue'
@@ -60,16 +60,23 @@ const GlobalModule = namespace('global');
 @Component({
     name: "Home",
     components: {
+        // 首页头部组件
         HomeHeader,
+        // 九宫格分类
         CateView,
+        // 下拉筛选
         DropdownMenu,
+        // 店铺列表
         ShopItem,
+        // 搜索组件
         Search,
+        // 加载组件
         Loading,
+        // Skeleton
         SkHome,
-        Star
     },
     computed: {
+        // 判断location的文字返回对应状态，3是已经定位状态
         isAddress () {
             if (this.location.name === '正在定位...') {
                 return 1
@@ -79,6 +86,7 @@ const GlobalModule = namespace('global');
                 return 3
             }
         },
+        // 获取当前时间是否大于等于20点
         nigth () {
             var date = new Date()
             var currentHours = date.getHours()
@@ -88,6 +96,9 @@ const GlobalModule = namespace('global');
                 return false
             }
         }
+    },
+    mounted () {
+        this.init()
     }
 })
 export default class Home extends Vue {
@@ -103,11 +114,15 @@ export default class Home extends Vue {
     finished: boolean = false  //上拉加载完毕 
     catelist: any = []  // 餐馆分类列表
     cateShow: boolean = false // 餐馆分类显示
-    sort: number= 0
-    filter: any = null
+    sort: number= 0   // 排序
+    filter: any = null  // 过滤
+    shopListShow: boolean = false // 显示店铺列表
+    // 获取vuex location对象state
     @GlobalModule.State(state => state.location) location;
+    // 获取vuex Mutation 保存经纬度
     @GlobalModule.Mutation('changeLocationLatLng') changeLocationLatLng;
-    shopListShow: boolean = false
+
+    // 监听isAddress，==3就是说明是已经定位了，然后需要请求获取店铺列表分类列表
     @Watch('isAddress')
     onChangeValue(newVal: number, oldVal: number){
         if (newVal === 3) {
@@ -115,8 +130,10 @@ export default class Home extends Vue {
             this.clearFilter()
         }
     }
+    // 初始化
     init () {
         let self = this;
+        // isAddress不为3说明是未定位，需要执行定位方法，否则就直接获取分类列表和商铺列表
         //@ts-ignore
         if (this.isAddress !== 3) {
             //@ts-ignore
@@ -127,6 +144,7 @@ export default class Home extends Vue {
             this.getCategorieList()
         }
     }
+    // 返回初始筛选条件
     clearFilter () {
         this.filter = null
         this.offset = 1
@@ -135,6 +153,7 @@ export default class Home extends Vue {
         this.getShoppingList()
         console.log(111)
     }
+    // 排序改变
     menuChange (value) {
         // console.log(value)
         if (value === 4) {
@@ -155,6 +174,7 @@ export default class Home extends Vue {
             })
         }
     }
+    // 筛选改变
     filterChange (active) {
         this.filter = active
         this.shoplist = []
@@ -164,6 +184,7 @@ export default class Home extends Vue {
             this.offset++
         })
     }
+    // 获取商铺列表
     async getShoppingList (cb?: any) {
         try {
             this.shopListShow = true
@@ -187,6 +208,7 @@ export default class Home extends Vue {
             console.log(ex)
         }
     }
+    // 获取分类列表
     async getCategorieList(){
         this.cateShow = false
         let res = await getCategorieList({parent_id: 0})
@@ -206,6 +228,7 @@ export default class Home extends Vue {
         },500)
         this.catelist = result
     }
+    // 获取定位信息
     getLocation(QMap){
         let options = {
             enableHighAccuracy: true,
@@ -226,6 +249,7 @@ export default class Home extends Vue {
             this.$router.push('/cities/detail')
         }
     }
+    // 定位失败
     showError(err) {
         let params = {
             name: '未能获取地址'
@@ -240,6 +264,7 @@ export default class Home extends Vue {
             this.changeLocationLatLng(params);
         }, 2000)
     }
+    // 获取地理位置，请求接口
     async addressDetail(QMap, coords){ //获取地理位置
         let myLatlng = new QMap.maps.LatLng(coords.latitude, coords.longitude);
         let {erron, data} = await getAddressDetail({
@@ -266,6 +291,7 @@ export default class Home extends Vue {
     closeMenu () {
         this.notScroll = false
     }
+    // 滚动事件
     scroll($event) {
         if ($event.target.scrollTop>35){
             this.headerFixed = true
@@ -280,6 +306,7 @@ export default class Home extends Vue {
             this.menuFixed = false
         }
     }
+    // 滚动加载
     onLoad () {
         if (this.offset<=this.totalPage) {
             setTimeout(() => {
@@ -289,9 +316,6 @@ export default class Home extends Vue {
             this.finished = true
             this.shopListShow = false
         }
-    }
-    mounted () {
-        this.init()
     }
 }
 </script>

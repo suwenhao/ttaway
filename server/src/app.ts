@@ -22,6 +22,8 @@ import * as Cors  from 'koa2-cors'
 // @ts-ignore
 import * as Zlib from 'zlib'
 import { REDIS_CONF } from './conf/db'
+
+import config from './config'
 import { COOKIE_KEY, JWT_KEY } from './conf/constant'
 // middleware
 import { ErrorHandle } from './middleware/errorHandle'
@@ -143,7 +145,7 @@ app.use(FoodRouter.allowedMethods());
 app.use(ErrorRouter.routes());
 app.use(ErrorRouter.allowedMethods());
 
-Server.listen(3001, () => {
-    console.log('服务器已经启动，请访问：http://localhost:3001/')
+Server.listen(config.prot, () => {
+    console.log(`服务器已经启动，接口地址为：http://localhost:${config.prot}/`)
 });
 

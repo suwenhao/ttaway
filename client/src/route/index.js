@@ -39,6 +39,8 @@ const Order = () => import('@/pages/order/order')
 const Pay = () => import('@/pages/order/pay')
 // 订单详情
 const OrderDetail = () => import('@/pages/order/detail')
+// 订单详情
+const Test = () => import('@/pages/test')
 
 const routes = [
     {
@@ -200,6 +202,11 @@ const routes = [
         meta: {
             keepAlive: false, 
         }
+    },
+    {
+        path: '/test',
+        name: 'test',
+        component: Test,
     },
     // 404
     { path: '/*', component: Error }

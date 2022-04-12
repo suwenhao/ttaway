@@ -15,7 +15,7 @@ router.prefix("/api/order");
 
 // 保存订单
 router.post("/save", validatorUser, async (ctx: any, next) => {
-  let { remark, json, tel, address, person } = ctx.request.body;
+  let { remark, json, tel, address, person }: any = ctx.request.body;
   let { _id } = ctx.session.userinfo;
   ctx.body = await saveOrder({
     remark,

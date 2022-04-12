@@ -24,12 +24,12 @@ let foodcateSchema = new Schema({
 
 let foodcateModel = Mongoose.model('foodcates', foodcateSchema);
 
-foodcateModel.findOne({ name: '热销' }).then(item => {
+foodcateModel.findOne({ name: '热销' }).then((item: any) => {
   if (!item) {
     foodcateModel.create({ name: '热销', shop_id: '0'})
   }
 })
-foodcateModel.findOne({ name: '优惠' }).then(item => {
+foodcateModel.findOne({ name: '优惠' }).then((item: any) => {
   if (!item) {
     foodcateModel.create({ name: '优惠', shop_id: '0' })
   }

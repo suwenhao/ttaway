@@ -21,17 +21,17 @@ router.prefix('/sys/food');
 
 // 添加食品
 router.post('/add', async (ctx: any) => {
-  const body = ctx.request.body;
+  const body: any = ctx.request.body;
   ctx.body = await Addfood(body);
 });
 // 修改食品
 router.post('/update', reqPermission(), async (ctx: any) => {
-  const body = ctx.request.body;
+  const body: any = ctx.request.body;
   ctx.body = await Editfood(body);
 });
 // 删除食品
 router.post('/delete', reqPermission(), async (ctx: any) => {
-  const { _id } = ctx.request.body;
+  const { _id }: any = ctx.request.body;
   ctx.body = await Deletefood(_id);
 });
 // 获取食品列表

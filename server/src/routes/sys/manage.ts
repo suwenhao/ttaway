@@ -17,17 +17,17 @@ router.prefix('/sys/manage');
 
 // 添加管理员
 router.post('/add', genValidator(manageValidate), async (ctx, next) => {
-  const body = ctx.request.body
+  const body: any = ctx.request.body
   ctx.body = await addAndUpdate(body)
 })
 // 修改管理员
 router.post('/update', genValidator(manageValidate), async (ctx, next) => {
-  const body = ctx.request.body
+  const body: any = ctx.request.body
   ctx.body = await addAndUpdate(body)
 })
 // 删除管理员
 router.post('/delete', reqPermission(), async (ctx, next) => {
-  const { _id } = ctx.request.body
+  const { _id }: any = ctx.request.body
   ctx.body = await deleteManage(_id)
 })
 // 管理员列表
@@ -36,7 +36,7 @@ router.get('/list', async (ctx, next) => {
 })
 // 获取更新后的菜单
 router.get('/updateinfo', async (ctx: any, next: any) => {
-  let {_id} = ctx.request.body
+  let {_id}: any = ctx.request.body
   ctx.body = await getNewManage(_id || ctx.manage._id)
 })
 

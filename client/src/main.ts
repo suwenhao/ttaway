@@ -14,9 +14,12 @@ import 'vant/lib/index.css';
 Vue.use(vant)
 Vue.config.productionTip = false
 Vue.use(Qmap);
+// @ts-ignore
 Vue.use(VueLazyload, {
   preLoad: 1.3,
+  // @ts-ignore
   error: require('@/assets/images/error.jpg'),
+  // @ts-ignore
   loading: require('@/assets/images/loading.svg'),
   attempt: 1
 });

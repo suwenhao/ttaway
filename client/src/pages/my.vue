@@ -2,7 +2,7 @@
   <div class="my-page">
     <div class="top-header">
       <div class="top-header-avatar" @click="token?gotoInfo():()=>{}">
-        <img :src="IMAGE_URL + (data&&data.avatar_image)" alt="" />
+        <img v-lazy="IMAGE_URL + (data&&data.avatar_image)" alt="" />
       </div>
       <div v-if="token" class="top-header-user" @click="gotoInfo">
         <h3 class="">{{data&&data.realName||'--'}}</h3>
@@ -37,13 +37,17 @@ import { Component, Vue, Watch } from "vue-property-decorator";
 
 const Loading = () => import('@/components/Loading/index.vue')
 
+// 装饰器
 @Component({
+  // 引入Loading组件
   components: { Loading },
+  // 计算属性获取token
   computed: {
     token () {
       return Cookies.get(TOKEN) || null
     }
   },
+  // 存在token是登录状态时才获取用户信息
   created () {
     if (this.token) {
       this.getUserInfo()
@@ -55,6 +59,7 @@ export default  class My extends Vue {
   data: any = null
   loading: boolean = false
   hongbao: any = 0
+  // 获取用户信息
   async getUserInfo () {
     this.loading = true
     let {erron, data, message} = await getUserInfo({_id: Cookies.get(USERID)})
@@ -62,19 +67,23 @@ export default  class My extends Vue {
     if (erron === 0) {
       this.data = data
     } else {
+      // 提示
       this.$notify({type: 'warning', message})
     }
   }
+  // 退出登录
   logout () {
     this.$dialog.confirm({
       title: '用户提示',
       message: '是否退出登录？'
     }).then(() => {
+      // 删除token和userId
       Cookies.remove(TOKEN);
       Cookies.remove(USERID);
       location.href='/'
     }).catch(() => {});
   }
+  // 跳转到个人资料页面
   gotoInfo () {
     this.$router.push({name: 'info'})
   }

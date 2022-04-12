@@ -22,12 +22,12 @@ let foodcateSchema = new Schema({
     update_time: { type: Number, default: null },
 });
 let foodcateModel = Mongoose.model('foodcates', foodcateSchema);
-foodcateModel.findOne({ name: '热销' }).then(item => {
+foodcateModel.findOne({ name: '热销' }).then((item) => {
     if (!item) {
         foodcateModel.create({ name: '热销', shop_id: '0' });
     }
 });
-foodcateModel.findOne({ name: '优惠' }).then(item => {
+foodcateModel.findOne({ name: '优惠' }).then((item) => {
     if (!item) {
         foodcateModel.create({ name: '优惠', shop_id: '0' });
     }

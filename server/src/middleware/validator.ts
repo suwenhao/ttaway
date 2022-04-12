@@ -15,7 +15,7 @@ import { jsonSchemaFileInfo, notPermissionFailInfo } from '../model/ErrorInfo'
  */
 export const genValidator = (validateFn: any) => {
   const validator = async (ctx: any, next: any) => {
-    const data = ctx.request.body
+    const data: any = ctx.request.body
     if (ctx.manage) {
       const root = ctx.manage.root
       if (!root) {
@@ -39,7 +39,7 @@ export const genValidator = (validateFn: any) => {
 
 export const genUserValidator = (validateFn: any) => {
   const validator = async (ctx: any, next: any) => {
-    const data = ctx.request.body
+    const data: any = ctx.request.body
     // 校验
     const error = validateFn(data)
     if (error) {

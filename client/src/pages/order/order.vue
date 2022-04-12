@@ -113,8 +113,9 @@ const Storage = new StorageModel();
 export default class Order extends Vue {
   data: any = [];
   IMAGE_URL: string = IMAGE_URL;
+  $router: any;
   async init() {
-    let { erron, data, message } = await orderList();
+    let { erron, data } = await orderList({});
     if (erron === 0) {
       this.data = data;
     }

@@ -15,17 +15,17 @@ router.prefix('/sys/role');
 
 // 添加角色
 router.post('/add', async (ctx: any) => {
-  const { role_name } = ctx.request.body;
+  const { role_name }: any = ctx.request.body;
   ctx.body = await Addrole(role_name);
 });
 // 修改角色
 router.post('/update', reqPermission(), async (ctx: any) => {
-  const { _id, role_name } = ctx.request.body;
+  const { _id, role_name }: any = ctx.request.body;
   ctx.body = await Editrole(_id, role_name);
 });
 // 删除角色
 router.post('/delete', reqPermission(), async (ctx: any) => {
-  const { _id } = ctx.request.body;
+  const { _id }: any = ctx.request.body;
   ctx.body = await Deleterole(_id);
 });
 // 获取角色列表
@@ -35,7 +35,7 @@ router.get('/list', async (ctx: any) => {
 });
 // 设置权限
 router.post('/set_permission', reqPermission(), async (ctx: any) => {
-  const body = ctx.request.body;
+  const body: any = ctx.request.body;
   ctx.body = await setPermission(ctx, body);
 })
 

@@ -21,7 +21,7 @@ router.get('/sms', async (ctx, next) => {
 
 // 用户登录
 router.post('/login', async (ctx, next) => {
-  const { phone, sms } = ctx.request.body
+  const { phone, sms }: any = ctx.request.body
   ctx.body = await loginManage({
     phone,
     sms,
@@ -37,7 +37,7 @@ router.post('/logout', async (ctx, next) => {
 // 上传文件
 router.post('/uploadfile', validatorUser, async (ctx: any, next) => {
   // 获取文件base64
-  const { base64, _id, avatar_image } = ctx.request.body;
+  const { base64, _id, avatar_image }: any = ctx.request.body;
   ctx.body = await uploadFile({
     base64, _id, avatar_image
   })

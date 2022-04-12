@@ -17,13 +17,13 @@ router.prefix('/sys');
 
 // 管理员是否存在
 router.post('/is_exist', async (ctx, next) => {
-  const { username } = ctx.request.body
+  const { username }: any = ctx.request.body
   ctx.body = await isExist(username)
 })
 
 // 管理员登录
 router.post('/login', genValidator(manageValidate), async (ctx, next) => {
-  const { username, password } = ctx.request.body
+  const { username, password }: any = ctx.request.body
   ctx.body = await loginManage({
     username,
     password

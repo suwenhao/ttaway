@@ -19,6 +19,7 @@ const Static = require("koa-static");
 const path = require("path");
 // @ts-ignore
 const Cors = require("koa2-cors");
+const config_1 = require("./config");
 const constant_1 = require("./conf/constant");
 // middleware
 const errorHandle_1 = require("./middleware/errorHandle");
@@ -131,7 +132,7 @@ app.use(food_1.default.allowedMethods());
 // 错误页
 app.use(error_1.default.routes());
 app.use(error_1.default.allowedMethods());
-Server.listen(3001, () => {
-    console.log('服务器已经启动，请访问：http://localhost:3001/');
+Server.listen(config_1.default.prot, () => {
+    console.log(`服务器已经启动，接口地址为：http://localhost:${config_1.default.prot}/`);
 });
 //# sourceMappingURL=app.js.map

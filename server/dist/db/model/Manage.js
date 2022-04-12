@@ -24,7 +24,7 @@ let ManageSchema = new Schema({
 });
 let ManageModel = Mongoose.model('manages', ManageSchema);
 // 初始化默认超级管理员用户: admin/admin
-ManageModel.findOne({ username: 'admin' }).then(user => {
+ManageModel.findOne({ username: 'admin' }).then((user) => {
     if (!user) {
         ManageModel.create({ username: 'admin', password: cryp_1.doCrypto('admin'), root: true })
             .then(user => {
